@@ -11,6 +11,7 @@ function preload()
 {
     helicopterIMG=loadImage("helicopter.png")
     packageIMG=loadImage("package.png")
+    
 }
 
 function setup() {
@@ -48,7 +49,7 @@ function setup() {
 
 function draw() {
 
-    background(0);
+    background(255);
     rect(ground.position.x, ground.position.y, width, 10)
     imageMode(CENTER);
     image(packageIMG, packageBody.position.x, packageBody.position.y, 70,70);
@@ -60,7 +61,7 @@ function draw() {
     
   
   
-//image(ground.positon.x, ground.position.y, width, 10);
+image(ground.positon.x, ground.position.y, width, 10);
 
 
  
@@ -69,7 +70,7 @@ function draw() {
 function keyPressed() {
  if (keyCode === DOWN_ARROW) {
 
-    Matter.Body.setStatic(packageBody,false)
+    Matter.Body.setStatic(packageBody,true)
   }
 }
 
